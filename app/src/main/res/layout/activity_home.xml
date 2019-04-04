@@ -50,5 +50,11 @@
             android:text="Result"
             android:textAlignment="center"
             android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnEntry"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:text="Student Entry" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
