@@ -16,10 +16,10 @@ public class Result extends AppCompatActivity {
 
        textViewName = findViewById(R.id.editTextName);
 
-        Intent i=getIntent();
+       /* Intent i=getIntent();
         Student studobj = (Student) i.getExtras().getSerializable("stud");
 
-
+*/
        // name.setText("Student ID:"+studobj.getSid());
     }
 }

@@ -23,7 +23,7 @@ public class StudentEntry extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_entry);
 
-       // Intent i = getIntent();
+      /* // Intent i = getIntent();
 
 
         Bundle mbundle= getIntent().getExtras();
@@ -53,8 +53,9 @@ public class StudentEntry extends AppCompatActivity {
                 mIntent.putExtra("stud",s1);
 
                 startActivity(mIntent);
+
             }
         });
-
+*/
     }
 }
