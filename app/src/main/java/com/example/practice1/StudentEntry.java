@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class StudentEntry extends AppCompatActivity {
 
-    private EditText editTextName;
+    private EditText Name;
     private Button btnEntry;
 
 
@@ -22,6 +22,31 @@ public class StudentEntry extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_entry);
+
+
+
+        Name = findViewById(R.id.editTextName);
+
+        btnEntry = findViewById(R.id.btnEnter);
+
+        btnEntry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                String name=Name.getText().toString();
+
+                final Student s1 = new Student(name);
+                //String name = Name.getText().toString();
+
+                Intent intent = new Intent(StudentEntry.this, Result.class);
+               intent.putExtra("Name", s1);
+
+                startActivity(intent);
+
+
+            }
+        });
 
       /* // Intent i = getIntent();
 
@@ -36,11 +61,7 @@ public class StudentEntry extends AppCompatActivity {
             }
         }
 
-        editTextName = findViewById(R.id.editTextName);
 
-       String name=editTextName.getText().toString();
-
-       final Student s1 = new Student(name);
 
         btnEntry.setOnClickListener(new View.OnClickListener() {
             @Override

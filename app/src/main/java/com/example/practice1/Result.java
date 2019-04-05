@@ -7,19 +7,32 @@ import android.widget.TextView;
 
 public class Result extends AppCompatActivity {
 
-    private TextView textViewName;
-
+    String name;
+TextView textViewName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        textViewName =   findViewById(R.id.tvName);
 
-       textViewName = findViewById(R.id.editTextName);
+       /* Bundle mbundle = getIntent().getExtras();
+        if(mbundle!=null)
+        {
+            if(mbundle.containsKey("Name"))
+            {
+                String name=mbundle.getString("Name");
 
-       /* Intent i=getIntent();
-        Student studobj = (Student) i.getExtras().getSerializable("stud");
+                textViewName.setText("Name:" + name);
+            }
+        }
 
 */
+
+
+        Intent i=getIntent();
+        Student studobj = (Student) i.getExtras().getSerializable("Name");
+        textViewName.setText("Name:" + studobj.getName());
+
        // name.setText("Student ID:"+studobj.getSid());
     }
 }
